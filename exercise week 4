@@ -1,0 +1,22 @@
+import random
+guessesTaken=0
+number = random.randint(1, 10)
+print("Im thinking of a number between 1 and 10")
+while guessesTaken<3:
+    print("guess")
+    guess = input()
+    guess = int(guess)
+    guessesTaken = guessesTaken + 1
+    if guess < number:
+        print("Too low, go higher")
+    if guess > number:
+        print("Too high, go lower")
+    if guess == number:
+        break
+
+
+if guess == number:
+    print("Congratulations! You got it")
+if guess !=number:
+    number = str(number)
+    print("Your guesses are over, it was " + number)
