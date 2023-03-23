@@ -1,0 +1,33 @@
+from app import ai
+
+choice = input("1. Consult the book\n2.Create a new recipe ")
+#print(choice)
+if choice == "2":
+    ingredients = input("What are our ingredients? ")
+    recipe_type = input("What kind of recipe do you want? ")
+    chatgpt_response = ai.recipe([ingredients], recipe_type)
+    print(chatgpt_response)
+    print(ai)  
+    saveyesno = input("Would you like to save your recipe? Y/N ")
+    if saveyesno == "Y":
+        name = input("What would you like to name this recipe? ")
+        print("Thank you for trying this recipe Book! To consult your recipe please restart! ")   
+    if saveyesno == "N":
+        print("Thank you for trying this recipe Book! This is the end, if you would like to try again please restart.  ")
+
+if choice == "1":
+    whichone = input("Which recipe would you like to consult? ")
+    difficulty = input("which level of difficulty was it? ")
+    recipe = ai.recipe([whichone], difficulty)
+    print(recipe)
+    job = input("Would you like to edit the difficulty or delete this recipe? edit/delete/no ")
+    if job == "edit":
+        difficulty = input("What is the new difficulty? ")
+        print("This is the new recipe, when you consult it in the book, please enter the right difficulty. ")
+    if job == "delete":
+        deleted = whichone
+        print("This recipe is now deleted. This is the end, if you would like to try again please restart. ")
+    if job == "no":
+        print("Thank you for trying this recipe Book! This is the end, if you would like to try again please restart. ")
+        
+print("Thank you for trying this recipe Book! This is the end, if you would like to try again please restart.  ")
