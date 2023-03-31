@@ -1,0 +1,27 @@
+#def check_input_for_number():
+ #   response = input("Give me a number")
+   # my_int = int(response)
+   # print(my_int)
+
+#check_input_for_number("Neun und Neunzig Luftballons")
+
+#def f(x):
+ #  print("I'm inside")
+  #  x =20
+   # print(x)
+
+#x = 15
+#f(x)
+#print(x)
+
+my_list = [1, "A", 3, True, "B", 25]
+def only_numbers(my_list):
+    my_new_list = []
+    for element in my_list:
+        if type(1) == type(element):
+            my_new_list.append (element)
+
+    return my_new_list
+
+clean_result = only_numbers(my_list)
+print(clean_result)
